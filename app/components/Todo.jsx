@@ -1,6 +1,6 @@
-const React = require('react')
+import React from 'react'
 
-class Todo extends React.Component {
+export default class Todo extends React.Component {
     render () {
         let {id, text} = this.props
         return (
@@ -9,5 +9,4 @@ class Todo extends React.Component {
     }
 }
 
-module.exports = Todo
 

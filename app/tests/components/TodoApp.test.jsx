@@ -1,10 +1,10 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-const expect = require('expect')
-const $ = require('jQuery')
-const TestUtils = require('react-addons-test-utils')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import expect from 'expect'
+import $ from 'jQuery'
+import TestUtils from 'react-addons-test-utils'
 
-const TodoApp = require('TodoApp')
+import TodoApp from 'TodoApp'
 
 describe('TodoApp', () => {
     it('should exist', () => {

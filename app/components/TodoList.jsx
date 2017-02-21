@@ -1,7 +1,7 @@
-const React = require('react')
-const Todo = require('Todo')
+import React from 'react'
+import Todo from 'Todo'
 
-class TodoList extends React.Component {
+export default class TodoList extends React.Component {
     render () {
         let {todos} = this.props
         let renderTodos = () => {
@@ -20,6 +20,4 @@ class TodoList extends React.Component {
         )
     }
 }
-
-module.exports = TodoList
 

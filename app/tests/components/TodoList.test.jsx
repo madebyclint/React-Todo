@@ -1,11 +1,11 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-const expect = require('expect')
-const $ = require('jQuery')
-const TestUtils = require('react-addons-test-utils')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import expect from 'expect'
+import $ from 'jQuery'
+import TestUtils from 'react-addons-test-utils'
 
-const TodoList = require('TodoList')
-const Todo = require('Todo')
+import TodoList from 'TodoList'
+import Todo from 'Todo'
 
 describe('TodoList', () => {
     it('should exist', () => {

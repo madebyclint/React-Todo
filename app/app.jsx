@@ -1,8 +1,8 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-const {Route, Router, IndexRoute, hashHistory} = require('react-router')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {Route, Router, IndexRoute, hashHistory} from 'react-router'
 
-const TodoApp = require('TodoApp')
+import TodoApp from 'TodoApp'
 
 // Load Foundation
 $(document).foundation()

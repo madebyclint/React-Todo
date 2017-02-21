@@ -1,7 +1,7 @@
-const React = require('react')
-const TodoList = require('TodoList')
+import React from 'react'
+import TodoList from 'TodoList'
 
-class TodoApp extends React.Component {
+export default class TodoApp extends React.Component {
     // ES7 method
     // Set up initial state
     state = {
@@ -35,4 +35,3 @@ class TodoApp extends React.Component {
     }
 }
 
-module.exports = TodoApp
