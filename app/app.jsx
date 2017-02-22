@@ -1,8 +1,7 @@
-/* @flow */
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Route, Router, IndexRoute, hashHistory} from 'react-router'
+import $ from 'jquery'
 
 import TodoApp from 'TodoApp'
 
@@ -17,3 +16,4 @@ ReactDOM.render(
     <TodoApp />,
     document.getElementById('app')
 )
+
