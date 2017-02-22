@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default class AddTodo extends React.Component {
-    onSubmit = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault
         let todoText = this.refs.todoText.value
         if (todoText.length > 0) {
@@ -12,7 +12,7 @@ export default class AddTodo extends React.Component {
     render () {
         return (
             <div>
-                <form ref="form" onSubmit={this.onSubmit} className="add-todo-form">
+                <form ref="form" onSubmit={this.handleSubmit} className="add-todo-form">
                     <input type="text" placeholder="What do you want to do?" ref="todoText" />
                     <button className="button primary expanded">Add Todo</button>
                 </form>
