@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Route, Router, IndexRoute, hashHistory} from 'react-router'
-import $ from 'jQuery'
+const $ = require('jquery')
 
 import TodoApp from 'TodoApp'
 
