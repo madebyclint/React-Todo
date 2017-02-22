@@ -1,11 +1,14 @@
 import React from 'react'
 import TodoList from 'TodoList'
 import AddTodo from 'AddTodo'
+import SearchTodo from 'SearchTodo'
 
 export default class TodoApp extends React.Component {
     // ES7 method
     // Set up initial state
     state = {
+        showCompleted: false,
+        searchText: '',
         todos: [
             {
                 id: 1,
@@ -26,6 +29,13 @@ export default class TodoApp extends React.Component {
         ]
     }
 
+    handleSearch = (showCompleted, searchText) => {
+        this.setState({
+            showCompleted: showCompleted,
+            searchText: searchText.toLowerCase()
+        })
+    }
+
     handleAddTodo = (text) => {
         alert('new todo: ' + text)
     }
@@ -34,6 +44,7 @@ export default class TodoApp extends React.Component {
         let {todos} = this.state
         return (
             <div>
+                <SearchTodo onSearch={this.handleSearch} />
                 <TodoList todos={todos} />
                 <AddTodo onAddTodo={this.handleAddTodo} />
             </div>
