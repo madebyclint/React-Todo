@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import expect from 'expect'
-import $ from 'jQuery'
 import TestUtils from 'react-addons-test-utils'
-
 import AddTodo from 'AddTodo'
 
 describe('AddTodo', () => {
@@ -15,10 +13,10 @@ describe('AddTodo', () => {
         let todoText = 'Check mail'
         let spy = expect.createSpy()
         let addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy} />)
-        let $el = $(ReactDOM.findDOMNode(addTodo))
+        let $el = ReactDOM.findDOMNode(addTodo)
 
         addTodo.refs.todoText.value = todoText
-        TestUtils.Simulate.submit($el.find('form')[0])
+        TestUtils.Simulate.submit($el.querySelector('form'))
 
         expect(spy).toHaveBeenCalledWith(todoText)
     })
@@ -27,10 +25,10 @@ describe('AddTodo', () => {
         let todoText = ''
         let spy = expect.createSpy()
         let addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy} />)
-        let $el = $(ReactDOM.findDOMNode(addTodo))
+        let $el = ReactDOM.findDOMNode(addTodo)
 
         addTodo.refs.todoText.value = todoText
-        TestUtils.Simulate.submit($el.find('form')[0])
+        TestUtils.Simulate.submit($el.querySelector('form'))
 
         expect(spy).toNotHaveBeenCalled()
     })

@@ -6,6 +6,7 @@ const $ = require('jquery')
 import TodoApp from 'TodoApp'
 
 // Load Foundation
+// Foundation is the only thing that require jQuery
 $(document).foundation()
 
 // App CSS

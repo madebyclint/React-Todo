@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import expect from 'expect'
-import $ from 'jQuery'
 import TestUtils from 'react-addons-test-utils'
-
 import Todo from 'Todo'
 
 describe('Todo', () => {
@@ -19,8 +17,8 @@ describe('Todo', () => {
         }
         let spy = expect.createSpy()
         let todo = TestUtils.renderIntoDocument(<Todo {...todoData} onToggle={spy} />)
-        let $el = $(ReactDOM.findDOMNode(todo))
-        TestUtils.Simulate.change($el.find('input')[0])
+        let $el = ReactDOM.findDOMNode(todo)
+        TestUtils.Simulate.change($el.querySelector('input'))
         expect(spy).toHaveBeenCalledWith(199)
     })
 })
