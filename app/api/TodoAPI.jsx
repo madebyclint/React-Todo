@@ -30,7 +30,7 @@ export default {
         // Filter by searchText
         filteredTodos = filteredTodos.filter((todo) => {
             if (searchText.length > 0) {
-                if (todo.text.toLowerCase().indexOf(searchText.toLowerCase()) >= 0) {
+                if (todo.text.toLowerCase().indexOf(searchText) >= 0) {
                     return todo
                 }
             } else {

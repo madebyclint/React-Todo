@@ -91,5 +91,15 @@ describe('TodoAPI', () => {
             expect(filteredTodos[0].completed).toBe(false)
             expect(filteredTodos[1].completed).toBe(true)
         })
+
+        it('should return all items if searchText is empty', () => {
+            let filteredTodos = TodoAPI.filterTodos(todos, true, '')
+            expect(filteredTodos.length).toBe(3)
+        })
+
+        it('should return only items that match searchText', () => {
+            let filteredTodos = TodoAPI.filterTodos(todos, true, 'some')
+            expect(filteredTodos.length).toBe(2)
+        })
     })
 })
