@@ -7,6 +7,7 @@ export default class SearchTodo extends React.Component {
 
         this.props.onSearch(showCompleted, searchText)
     }
+
     render () {
         return (
             <div>

@@ -11,6 +11,7 @@ export default class AddTodo extends React.Component {
             this.refs.todoText.focus()
         }
     }
+
     render () {
         return (
             <div>
