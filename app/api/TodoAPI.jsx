@@ -29,13 +29,7 @@ export default {
 
         // Filter by searchText
         filteredTodos = filteredTodos.filter((todo) => {
-            if (searchText.length > 0) {
-                if (todo.text.toLowerCase().indexOf(searchText) >= 0) {
-                    return todo
-                }
-            } else {
-                return todo
-            }
+            return searchText.length === 0 | todo.text.toLowerCase().indexOf(searchText) >= 0
         })
 
         // Sort todos with non-completed first
