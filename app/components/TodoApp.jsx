@@ -3,7 +3,7 @@ import uuid from 'node-uuid'
 import TodoList from 'TodoList'
 import AddTodo from 'AddTodo'
 import SearchTodo from 'SearchTodo'
-import TodoAPI from 'TodoApi'
+import TodoAPI from 'TodoAPI'
 
 export default class TodoApp extends React.Component {
     // ES7 method
