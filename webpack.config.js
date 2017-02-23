@@ -1,6 +1,9 @@
 var webpack = require('webpack')
 var path = require('path')
 
+process.traceDeprecation = true
+// process.noDeprecation = true
+
 module.exports = {
     entry: [
         'script-loader!jquery/dist/jquery.min.js',
