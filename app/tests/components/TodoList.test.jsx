@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import expect from 'expect'
-import $ from 'jQuery'
 import TestUtils from 'react-addons-test-utils'
 
 import TodoList from 'TodoList'
@@ -26,5 +25,12 @@ describe('TodoList', () => {
         let todoList = TestUtils.renderIntoDocument(<TodoList todos={todos} />)
         let todosComponents = TestUtils.scryRenderedComponentsWithType(todoList, Todo)
         expect(todosComponents.length).toBe(todos.length)
+    })
+
+    it('should render empty message if no todos', () => {
+        let todos = []
+        let todoList = TestUtils.renderIntoDocument(<TodoList todos={todos} />)
+        let $el = ReactDOM.findDOMNode(todoList)
+        expect($el.querySelector('.container__message').innerHTML).toBe('Nothing to do')
     })
 })
