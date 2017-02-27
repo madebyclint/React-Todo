@@ -2,9 +2,7 @@ ol {
     margin-left: 0;
 }
 .todo {
-    align-items: center;
     cursor: pointer;
-    display: flex;
     list-style-type: none;
     padding: 1rem;
     transition: background-color .3s;
@@ -12,6 +10,8 @@ ol {
         background-color: #f0f0f0
     }
     label {
+        align-items: center;
+        display: flex;
         p {
             margin: 0;
         }
