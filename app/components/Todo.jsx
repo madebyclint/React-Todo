@@ -4,6 +4,7 @@ import moment from 'moment'
 export default class Todo extends React.Component {
     render () {
         let {id, text, completed, createdAt, completedAt} = this.props
+        let todoClassName = completed ? 'todo todo-completed' : 'todo';
         let renderDate = () => {
             let message = 'Created '
             let timestamp = createdAt
@@ -14,17 +15,21 @@ export default class Todo extends React.Component {
             return message + moment.unix(timestamp).format('MMM Do YYYY @ h:mm a')
         }
         return (
-            <li>
+            <li className={todoClassName}>
                 {/*
                     This is an controlled component, therefore we need to use checked with onChange
                     http://stackoverflow.com/a/36716014
                 */}
                 <label>
-                    <input type="checkbox" checked={completed} onChange={() => {
-                        this.props.onToggle(id)
-                    }} />
-                    <p>{text}</p>
-                    <p>{renderDate()}</p>
+                    <div>
+                        <input type="checkbox" checked={completed} onChange={() => {
+                            this.props.onToggle(id)
+                        }} />
+                    </div>
+                    <div>
+                        <p>{text}</p>
+                        <p className="todo__subtext">{renderDate()}</p>
+                    </div>
                 </label>
             </li>
         )

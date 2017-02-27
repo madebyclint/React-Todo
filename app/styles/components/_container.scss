@@ -18,6 +18,11 @@
         align-items: center;
     }
 }
+.container__message {
+    color: $light-color;
+    margin: 2rem auto;
+    text-align: center;
+}
 .container__footer {
     border-top: 1px solid $light-gray-border;
     padding: 1rem 1rem 0 1rem;
