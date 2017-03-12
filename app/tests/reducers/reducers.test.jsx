@@ -1,5 +1,6 @@
 import expect from 'expect'
 import * as reducers from 'reducers'
+import df from 'deep-freeze-strict'
 
 describe('Reducers', () => {
     describe('searchTextReducer', () => {
@@ -8,7 +9,7 @@ describe('Reducers', () => {
                 type: 'SET_SEARCH_TEXT',
                 searchText: 'dog'
             }
-            let res = reducers.searchTextReducer('', action)
+            let res = reducers.searchTextReducer(df(''), df(action))
             expect(res).toEqual(action.searchText)
         })
     })
@@ -17,14 +18,14 @@ describe('Reducers', () => {
             let action = {
                 type: 'TOGGLE_SHOW_COMPLETED'
             }
-            let res = reducers.showCompletedReducer(true, action)
+            let res = reducers.showCompletedReducer(df(true), df(action))
             expect(res).toEqual(false)
         })
         it('should toggle showCompleted status from false to true', () => {
             let action = {
                 type: 'TOGGLE_SHOW_COMPLETED'
             }
-            let res = reducers.showCompletedReducer(false, action)
+            let res = reducers.showCompletedReducer(df(false), df(action))
             expect(res).toEqual(true)
         })
     })
