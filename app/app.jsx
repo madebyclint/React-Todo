@@ -9,8 +9,8 @@ window.$ = window.jQuery = jQuery
 import TodoApp from 'TodoApp'
 
 import * as actions from 'actions'
-import * as configureStore from 'configureStore'
-const store = configureStore.configure()
+import {configure} from 'configureStore'
+const store = configure()
 
 store.subscribe(() => {
     console.log('New state', store.getState())

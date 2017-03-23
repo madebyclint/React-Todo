@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import moment from 'moment'
 import * as actions from 'actions'
 
-class Todo extends React.Component {
+export class Todo extends React.Component {
     render () {
         let {id, text, completed, createdAt, completedAt, dispatch} = this.props
         let todoClassName = completed ? 'todo todo-completed' : 'todo';
@@ -39,8 +39,6 @@ class Todo extends React.Component {
     }
 }
 
-module.exports = connect(
-
-)(Todo)
+export default connect()(Todo)
 
 
