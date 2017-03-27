@@ -1,29 +1,30 @@
 .container {
-    background-color: $light-gray-override;
+    margin-bottom: 2rem;
     border: 1px solid $light-gray-border;
     border-radius: 5px;
-    margin-bottom: 2rem;
+    background-color: $light-gray-override;
 }
 .container__header {
-    border-bottom: 1px solid $light-gray-border;
     padding: 1rem;
+    border-bottom: 1px solid $light-gray-border;
 
     label {
-        cursor: pointer;
         font-size: 1rem;
+        cursor: pointer;
     }
 
     > :last-child {
         display: flex;
+
         align-items: center;
     }
 }
 .container__message {
-    color: $light-color;
     margin: 2rem auto;
+    color: $light-color;
     text-align: center;
 }
 .container__footer {
-    border-top: 1px solid $light-gray-border;
     padding: 1rem 1rem 0 1rem;
+    border-top: 1px solid $light-gray-border;
 }
