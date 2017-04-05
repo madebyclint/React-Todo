@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import Todo from 'Todo'
 
-class TodoList extends React.Component {
+export class TodoList extends React.Component {
     render () {
         let {todos} = this.props
         let renderTodos = () => {
@@ -27,7 +27,7 @@ class TodoList extends React.Component {
     }
 }
 
-module.exports = connect(
+export default connect(
     (state) => {
         return {
             todos: state.todos
